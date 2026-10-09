@@ -41,42 +41,32 @@
 
     <div class="demo-grid">
 
-        <!-- Window Type 1: Standard Win 3.1 Window -->
+        <!-- Window Type 1: Standard Win 3.1 Parent Window with Child Window Inside -->
         <div class="demo-card">
-            <div class="demo-heading">1. Standard Window (.win31-window)</div>
-            <div class="win31-window">
+            <div class="demo-heading">1. Parent Window containing Child Window</div>
+            <div class="win31-window" style="height: 420px; width: 360px;">
                 <div class="win31-titlebar-container">
                     <button class="close-btn" aria-label="Close"></button>
-                    <div class="win31-titlebar-text">Program Manager</div>
+                    <div class="win31-titlebar-text">Main Application (MDI Parent)</div>
                     <button class="minimise-btn" aria-label="Minimize"></button>
                     <button class="maximise-btn" aria-label="Maximize"></button>
                 </div>
-                <div class="win31-content">
-                    <p>Welcome to Windows 3.1 UI showcase.</p>
-                    <p>This is a standard window container with custom titlebar controls, scrollable content area, and pixelated border accents.</p>
-                    <div class="button-group">
-                        <button class="win31-btn">OK</button>
-                        <button class="win31-btn">Cancel</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Window Type 1b: Child Window (.child-window) -->
-        <div class="demo-card">
-            <div class="demo-heading">1b. Child Window (.win31-window.child-window)</div>
-            <div class="win31-window child-window">
-                <div class="win31-titlebar-container">
-                    <button class="close-btn" aria-label="Close"></button>
-                    <div class="win31-titlebar-text">Document 1</div>
-                    <button class="minimise-btn" aria-label="Minimize"></button>
-                    <button class="maximise-btn" aria-label="Maximize"></button>
-                </div>
-                <div class="win31-content">
-                    <p>Child window inside MDI container.</p>
-                    <p>Uses simple 1px border without corner ticks and close button cropped at the right.</p>
-                    <div class="button-group">
-                        <button class="win31-btn">Save</button>
+                <div class="win31-content" style="background-color: #808080; padding: 10px;">
+                    <!-- Child Window nested inside Standard Window -->
+                    <div class="win31-window child-window" style="width: 280px; height: 220px; margin-top: 0;">
+                        <div class="win31-titlebar-container">
+                            <button class="close-btn" aria-label="Close"></button>
+                            <div class="win31-titlebar-text">Document 1 (Child Window)</div>
+                            <button class="minimise-btn" aria-label="Minimize"></button>
+                            <button class="maximise-btn" aria-label="Maximize"></button>
+                        </div>
+                        <div class="win31-content">
+                            <p>Child window nested inside standard window content area.</p>
+                            <p>Child window border has no outer corner ticks and close button is cropped at the right.</p>
+                            <div class="button-group">
+                                <button class="win31-btn">Save</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
