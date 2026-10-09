@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows 3.1 Style Guide & Components</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .demo-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            align-items: flex-start;
+            margin-top: 15px;
+        }
+        .demo-card {
+            display: flex;
+            flex-direction: column;
+        }
+        .demo-heading {
+            font-family: 'vgasys', monospace;
+            font-size: 14px;
+            font-weight: bold;
+            color: #000000;
+            margin-bottom: 8px;
+            text-shadow: 1px 1px #ffffff;
+        }
+        .button-group {
+            display: flex;
+            gap: 12px;
+            margin-top: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="demo-heading" style="font-size: 18px;">Windows 3.1 CSS UI Component Showcase</h1>
+    <p style="font-family: 'vgasys', monospace; font-size: 12px; margin-bottom: 20px;">
+        Click or focus elements to test interactive Windows 3.1 UI behaviors.
+    </p>
+
+    <div class="demo-grid">
+
+        <!-- Window Type 1: Standard Win 3.1 Window -->
+        <div class="demo-card">
+            <div class="demo-heading">1. Standard Window (.win31-window)</div>
+            <div class="win31-window">
+                <div class="win31-titlebar-container">
+                    <button class="close-btn" aria-label="Close"></button>
+                    <div class="win31-titlebar-text">Program Manager</div>
+                    <button class="minimise-btn" aria-label="Minimize"></button>
+                    <button class="maximise-btn" aria-label="Maximize"></button>
+                </div>
+                <div class="win31-content">
+                    <p>Welcome to Windows 3.1 UI showcase.</p>
+                    <p>This is a standard window container with custom titlebar controls, scrollable content area, and pixelated border accents.</p>
+                    <div class="button-group">
+                        <button class="win31-btn">OK</button>
+                        <button class="win31-btn">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Window Type 2: Window Style 2 -->
+        <div class="demo-card">
+            <div class="demo-heading">2. Window Variant 2 (.win31-window2)</div>
+            <div class="win31-window2">
+                <div class="win31-titlebar-container">
+                    <button class="close-btn" aria-label="Close"></button>
+                    <div class="win31-titlebar-text">Control Panel</div>
+                    <button class="minimise-btn" aria-label="Minimize"></button>
+                    <button class="maximise-btn" aria-label="Maximize"></button>
+                </div>
+                <div class="win31-content">
+                    <p>Control Panel Settings</p>
+                    <p>Features clean grey frame background without outer pseudo-borders.</p>
+                    <div class="button-group">
+                        <button class="win31-btn2">Option 1</button>
+                        <button class="win31-btn2">Option 2</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Window Type 3: Window Style 3 with Auto Width / Height & Dialogs -->
+        <div class="demo-card">
+            <div class="demo-heading">3. Dialog Window (.win31-window3)</div>
+            <div class="win31-window3 auto-width-height">
+                <div class="win31-titlebar-container">
+                    <button class="close-btn" aria-label="Close"></button>
+                    <div class="win31-titlebar-text">System Information</div>
+                </div>
+                <div class="win31-content win31-content2">
+                    <div class="msg-row">
+                        <div class="message-box-icon"></div>
+                        <div class="msg-text">
+                            Windows 3.1 Operating System<br>
+                            Memory Available: 640 KB Base, 16 MB Extended<br>
+                            System Resources: 85% Free
+                        </div>
+                    </div>
+                    <div class="msg-buttons">
+                        <button class="win31-btn">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Message Box Icons Showcase -->
+        <div class="demo-card">
+            <div class="demo-heading">4. Message Box Dialogs & Icons</div>
+
+            <!-- Message Box 1: Info / Stop Icon 1 -->
+            <div class="win31-window3 auto-width-height" style="margin-bottom: 15px;">
+                <div class="win31-titlebar-container">
+                    <button class="close-btn" aria-label="Close"></button>
+                    <div class="win31-titlebar-text">Warning</div>
+                </div>
+                <div class="win31-content2">
+                    <div class="msg-row">
+                        <div class="message-box-icon"></div>
+                        <div class="msg-text">An error has occurred while reading drive A:</div>
+                    </div>
+                    <div class="msg-buttons">
+                        <button class="win31-btn">Retry</button>
+                        <button class="win31-btn" style="margin-left: 10px;">Cancel</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Message Box 2: Icon 2 -->
+            <div class="win31-window3 auto-width-height" style="margin-bottom: 15px;">
+                <div class="win31-titlebar-container">
+                    <button class="close-btn" aria-label="Close"></button>
+                    <div class="win31-titlebar-text">Question</div>
+                </div>
+                <div class="win31-content2">
+                    <div class="msg-row">
+                        <div class="message-box-icon2"></div>
+                        <div class="msg-text">Save changes to document before exiting?</div>
+                    </div>
+                    <div class="msg-buttons">
+                        <button class="win31-btn">Yes</button>
+                        <button class="win31-btn" style="margin-left: 10px;">No</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Message Box 3: Icon 3 -->
+            <div class="win31-window3 auto-width-height" style="margin-bottom: 15px;">
+                <div class="win31-titlebar-container">
+                    <button class="close-btn" aria-label="Close"></button>
+                    <div class="win31-titlebar-text">Exclamation</div>
+                </div>
+                <div class="win31-content2">
+                    <div class="msg-row">
+                        <div class="message-box-icon3"></div>
+                        <div class="msg-text">Disk space is running low on system partition.</div>
+                    </div>
+                    <div class="msg-buttons">
+                        <button class="win31-btn2">OK</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Message Box 4: Icon 4 -->
+            <div class="win31-window3 auto-width-height">
+                <div class="win31-titlebar-container">
+                    <button class="close-btn" aria-label="Close"></button>
+                    <div class="win31-titlebar-text">Information</div>
+                </div>
+                <div class="win31-content2">
+                    <div class="msg-row">
+                        <div class="message-box-icon4"></div>
+                        <div class="msg-text">Setup completed successfully.</div>
+                    </div>
+                    <div class="msg-buttons">
+                        <button class="win31-btn2">OK</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Button Style Showcase -->
+        <div class="demo-card">
+            <div class="demo-heading">5. Button Styles (.win31-btn & .win31-btn2)</div>
+            <div class="win31-window3 auto-width-height">
+                <div class="win31-titlebar-container">
+                    <button class="close-btn" aria-label="Close"></button>
+                    <div class="win31-titlebar-text">Button Test</div>
+                </div>
+                <div class="win31-content2">
+                    <p style="margin-top: 0;">Standard Button (.win31-btn):</p>
+                    <div class="button-group">
+                        <button class="win31-btn">OK</button>
+                        <button class="win31-btn">Cancel</button>
+                        <button class="win31-btn">Help</button>
+                    </div>
+
+                    <p style="margin-top: 15px;">Alternative Outlined Button (.win31-btn2):</p>
+                    <div class="button-group">
+                        <button class="win31-btn2">OK</button>
+                        <button class="win31-btn2">Cancel</button>
+                        <button class="win31-btn2">Help</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
