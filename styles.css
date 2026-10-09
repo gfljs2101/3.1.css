@@ -61,6 +61,24 @@ body {
     z-index: 10;    
     pointer-events: none;    
 }
+/* Child window support */
+.win31-window.child-window,
+.win31-window.child,
+.child-window {
+    border: 1px solid #000000;
+}
+.win31-window.child-window::after,
+.win31-window.child::after,
+.child-window::after {
+    display: none;
+}
+.child-window .close-btn::before,
+.win31-window.child .close-btn::before,
+.win31-window.child-window .close-btn::before,
+.close-btn.child::before {
+    background-position: right center;
+}
+
 .win31-window2 {
     position: relative;
     width: var(--width);
